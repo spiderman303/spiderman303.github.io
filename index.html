@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Domaine de Cassagnole — Vins Bio & Éco-Domaine | Assas, Hérault</title>
-  <meta name="description" content="Éco-domaine viticole en agriculture biologique à Assas (34), à 10 km au nord de Montpellier. Vins AOC sans sulfites, légumes, charcuterie, visites et événements." />
+  <title>Domaine de Cassagnole — Vins Bio AOC | Assas, Hérault</title>
+  <meta name="description" content="Éco-domaine viticole en agriculture biologique à Assas (34820), à 10 km au nord de Montpellier. Vins AOC sans sulfites, légumes, charcuterie, pain au four à bois, visites et événements." />
   <link rel="stylesheet" href="cassagnole.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,12 +28,23 @@
       <li><a href="#experiences">Visites</a></li>
       <li><a href="#boutique">Boutique</a></li>
       <li><a href="#evenements">Événements</a></li>
-      <li><a href="#contact" class="nav-cta">Nous Contacter</a></li>
+      <li><a href="#localisation">Nous Trouver</a></li>
     </ul>
 
-    <div class="burger" id="burger" aria-label="Menu">
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
-    </div>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <nav class="nav-mobile" id="navMobile">
+    <a href="#intro">Le Domaine</a>
+    <a href="#vins">Nos Vins</a>
+    <a href="#terroir">Terroir</a>
+    <a href="#experiences">Visites</a>
+    <a href="#boutique">Boutique</a>
+    <a href="#evenements">Événements</a>
+    <a href="#localisation">Nous Trouver</a>
   </nav>
 
   <!-- ░░░ HERO ░░░ -->
@@ -47,7 +58,7 @@
         Domaine de<br><em>Cassagnole</em>
       </h1>
       <p class="hero-sous-titre">
-        Vins biologiques &amp; terroir vivant aux portes de Montpellier
+        Éco-domaine viticole en agriculture biologique aux portes de Montpellier
       </p>
       <div class="hero-btns">
         <a href="#vins" class="btn-primaire">Découvrir nos vins</a>
@@ -55,7 +66,7 @@
       </div>
     </div>
 
-    <div class="hero-scroll">
+    <div class="hero-scroll" aria-hidden="true">
       <span>Découvrir</span>
       <div class="scroll-chevron"></div>
     </div>
@@ -65,24 +76,27 @@
   <section id="intro">
     <div class="intro-inner">
       <div>
-        <p class="intro-badge">Depuis 1988</p>
+        <p class="intro-badge">Fondé en 1988</p>
         <h2 class="intro-titre">
-          Une famille,<br>une terre,<br><em>une passion du vivant</em>
+          Une famille,<br>une terre,<br><em>un art de vivre</em>
         </h2>
         <p class="intro-texte">
-          Fondé en 1988 par Maryvonne et Jean-Marie Sabatier, le Domaine de Cassagnole est aujourd'hui
-          conduit par leur fils Christophe, accompagné de Florence et Zoba. Nichés à 10 km au nord de
-          Montpellier, ils ont choisi de revenir à l'essentiel : produire, avec la nature et non contre elle.
+          Créé en 1988 par Maryvonne et Jean-Marie Sabatier, le Domaine de Cassagnole
+          est repris par leur fils Christophe en 2005, accompagné de Florence et Zoba.
+          À 10&nbsp;km au nord de Montpellier, le vignoble s'étend sur 12,5&nbsp;hectares,
+          morcelé entre Claret, Saint-Mathieu-de-Tréviers et Assas.
         </p>
         <p class="intro-texte">
-          Converti à l'agriculture biologique dès 2000, le domaine couvre aujourd'hui 12,5 hectares
-          de vignes morcelées entre Claret, Saint-Mathieu-de-Tréviers et Assas. Un vignoble de garrigue,
-          entouré de pins, baigné par les vents du Midi — un terroir d'une sincérité rare.
+          Converti à l'agriculture biologique depuis 2000, le domaine produit des vins
+          AOC Languedoc sans sulfites ajoutés, des légumes de saison en permaculture,
+          de la charcuterie issue de cochons élevés en liberté, et un pain cuit
+          au four à bois du domaine.
         </p>
         <p class="intro-texte">
-          Ici, les vins naissent sans sulfites ajoutés. Les légumes poussent en permaculture.
-          Les cochons vivent en liberté. Le pain sort du four à bois. C'est un lieu où l'on prend le temps
-          de s'émerveiller.
+          Certifié Agriculture Biologique et porteur de la mention
+          <em>Nature &amp; Progrès</em>, Cassagnole est un éco-domaine où tout
+          est cultivé, élevé ou cuit sur place — un lieu qui réconcilie l'Homme
+          et le vivant.
         </p>
 
         <div class="intro-stats">
@@ -96,17 +110,19 @@
           </div>
           <div class="stat">
             <div class="stat-num">Bio</div>
-            <div class="stat-label">Depuis l'an 2000</div>
+            <div class="stat-label">Certifié depuis 2000</div>
           </div>
         </div>
       </div>
 
+      <!-- Image décorée — visible desktop uniquement -->
       <div class="intro-img-wrapper reveal">
         <div class="intro-img-cadre"></div>
         <img
           class="intro-img"
-          src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80"
-          alt="Vignes du Domaine de Cassagnole en Languedoc"
+          src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=900&q=80"
+          alt="Rangées de vignes au coucher de soleil, Languedoc"
+          loading="lazy"
         />
       </div>
     </div>
@@ -115,65 +131,82 @@
   <!-- ░░░ VINS ░░░ -->
   <section id="vins">
     <div class="section-header reveal">
-      <p class="section-eyebrow">L'essentiel de la vigne</p>
-      <h2 class="section-titre">Nos <em>Vins</em></h2>
-      <p class="section-sous-titre" style="color:rgba(242,232,213,0.6)">
-        AOC Languedoc, sans sulfites ajoutés. Des vins frais et gratifiants,
-        expression pure du terroir de garrigue.
+      <p class="section-eyebrow">Sans sulfites ajoutés</p>
+      <h2 class="section-titre">Nos <em>Vins</em> AOC</h2>
+      <p class="section-sous-titre">
+        Coteaux-du-Languedoc vinifiés avec les levures indigènes de nos raisins.
+        Des vins frais et gratifiants, sincères expression du terroir de garrigue.
       </p>
     </div>
 
     <div class="vins-grille">
+
       <!-- Rouge -->
       <div class="vin-carte reveal reveal-delay-1">
-        <div class="vin-carte-bg rouge"></div>
-        <div class="vin-deco"></div>
+        <img
+          class="vin-carte-img"
+          src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80"
+          alt="Vin rouge du Domaine de Cassagnole"
+          loading="lazy"
+        />
+        <div class="vin-carte-overlay rouge"></div>
         <div class="vin-contenu">
           <span class="vin-tag">AOC Languedoc · Rouge</span>
-          <h3 class="vin-nom">Cuvée Garrigue</h3>
+          <h3 class="vin-nom">Cuvée Rouge</h3>
           <p class="vin-cepage">Syrah · Grenache · Mourvèdre</p>
           <p class="vin-desc">
-            Un rouge profond aux arômes de fruits noirs et d'épices douces,
-            structuré par un boisé délicat. La minéralité du terroir calcaire
-            s'exprime avec franchise en finale.
+            Profond et structuré, aux arômes de fruits noirs et d'épices
+            douces. La minéralité du terroir calcaire et argilo-calcaire
+            de garrigue s'exprime avec franchise.
           </p>
-          <a href="#contact" class="vin-lien">En savoir plus</a>
+          <span class="vin-lien">En savoir plus</span>
         </div>
       </div>
 
       <!-- Rosé -->
       <div class="vin-carte reveal reveal-delay-2">
-        <div class="vin-carte-bg rose"></div>
-        <div class="vin-deco"></div>
+        <img
+          class="vin-carte-img"
+          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+          alt="Vin rosé de saignée du Domaine de Cassagnole"
+          loading="lazy"
+        />
+        <div class="vin-carte-overlay rose"></div>
         <div class="vin-contenu">
-          <span class="vin-tag">AOC Languedoc · Rosé</span>
+          <span class="vin-tag">AOC Languedoc · Rosé de Saignée</span>
           <h3 class="vin-nom">Rosé de Saignée</h3>
           <p class="vin-cepage">Syrah · Grenache</p>
           <p class="vin-desc">
-            Généreux, rond et gourmand. Ce rosé de saignée déploie une robe
-            saumon intense, des fraîcheurs de fraise et de grenade.
-            Idéal sur les tables d'été méridionales.
+            Généreux, rond et gourmand. Robe saumon intense, fraîcheurs
+            de fraise et d'agrumes, bouche souple et équilibrée.
+            Cité au Guide Hachette.
           </p>
-          <a href="#contact" class="vin-lien">En savoir plus</a>
+          <span class="vin-lien">En savoir plus</span>
         </div>
       </div>
 
-      <!-- Blanc -->
+      <!-- Blanc / VDP -->
       <div class="vin-carte reveal reveal-delay-3">
-        <div class="vin-carte-bg blanc"></div>
-        <div class="vin-deco"></div>
+        <img
+          class="vin-carte-img"
+          src="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&q=80"
+          alt="Vin blanc et vigne verte du Languedoc"
+          loading="lazy"
+        />
+        <div class="vin-carte-overlay blanc"></div>
         <div class="vin-contenu">
-          <span class="vin-tag">AOC Languedoc · Blanc</span>
-          <h3 class="vin-nom">Bellevue Blanc</h3>
-          <p class="vin-cepage">Grenache Blanc · Roussanne</p>
+          <span class="vin-tag">Vins de Pays · Blanc</span>
+          <h3 class="vin-nom">Vin de Pays Blanc</h3>
+          <p class="vin-cepage">Cépages blancs du domaine</p>
           <p class="vin-desc">
-            Floral et vif, ce blanc de garrigue exprime toute la fraîcheur
-            des nuits languedociennes. Texture ample, finale saline,
+            Floral et vif, ce blanc exprime toute la fraîcheur
+            des nuits languedociennes. Vinifié en cuve,
             sans sulfites ajoutés.
           </p>
-          <a href="#contact" class="vin-lien">En savoir plus</a>
+          <span class="vin-lien">En savoir plus</span>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -181,66 +214,85 @@
   <section id="terroir">
     <div class="terroir-inner">
       <div class="section-header reveal">
-        <p class="section-eyebrow">Nos pratiques</p>
+        <p class="section-eyebrow">Agriculture Bio-Logique</p>
         <h2 class="section-titre">Un <em>Terroir</em> cultivé avec soin</h2>
         <p class="section-sous-titre">
-          Garrigue, pins, calcaire et argile : un écosystème unique que nous
-          respectons depuis plus de vingt ans.
+          Garrigue, pins, calcaire et argile : un écosystème protégé depuis plus
+          de vingt ans, certifié AB et Nature &amp; Progrès.
         </p>
       </div>
 
       <div class="terroir-grille">
+
         <div class="terroir-img-stack reveal">
           <img
             class="terroir-img-1"
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80"
-            alt="Chai du domaine"
+            src="https://images.unsplash.com/photo-1543512214-318c7553f230?w=700&q=80"
+            alt="Vignes en garrigue languedocienne"
+            loading="lazy"
           />
           <img
             class="terroir-img-2"
-            src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&q=80"
-            alt="Raisins en vendange"
+            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80"
+            alt="Vendanges à la main"
+            loading="lazy"
           />
-          <div class="terroir-badge-img">Agriculture Biologique</div>
+          <div class="terroir-badge-img">Certifié AB · Nature &amp; Progrès</div>
         </div>
 
         <div class="terroir-points">
+
           <div class="terroir-point reveal reveal-delay-1">
-            <div class="terroir-point-icon">🌿</div>
-            <h3 class="terroir-point-titre">Agriculture Bio-Logique</h3>
-            <p class="terroir-point-texte">
-              Certifiés en Agriculture Biologique depuis 2000, nous utilisons
-              exclusivement des intrants naturels : tisanes de plantes,
-              soufre, cuivre en doses minimales et composts maison.
-            </p>
+            <img
+              class="terroir-point-img"
+              src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=700&q=80"
+              alt="Sol vivant et enherbé entre les rangs"
+              loading="lazy"
+            />
+            <div class="terroir-point-body">
+              <h3 class="terroir-point-titre">Sols Vivants</h3>
+              <p class="terroir-point-texte">
+                Enherbement inter-rangs, labour superficiel et composts maison.
+                Nos sols respirent et abritent une biodiversité qui renforce
+                naturellement la vigne.
+              </p>
+            </div>
           </div>
+
           <div class="terroir-point reveal reveal-delay-2">
-            <div class="terroir-point-icon">🌡️</div>
-            <h3 class="terroir-point-titre">Sols Vivants</h3>
-            <p class="terroir-point-texte">
-              Enherbement inter-rangs, labour superficiel, couverts végétaux :
-              nos sols respirent et abritent une biodiversité foisonnante
-              qui renforce naturellement la vigne.
-            </p>
+            <img
+              class="terroir-point-img"
+              src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=700&q=80"
+              alt="Cuves de vinification naturelle"
+              loading="lazy"
+            />
+            <div class="terroir-point-body">
+              <h3 class="terroir-point-titre">Vinification Sans Sulfites</h3>
+              <p class="terroir-point-texte">
+                Levures indigènes, zéro sulfites ajoutés. Une vinification
+                naturelle qui révèle la vérité du raisin et préserve
+                ses arômes les plus subtils.
+              </p>
+            </div>
           </div>
+
           <div class="terroir-point reveal reveal-delay-3">
-            <div class="terroir-point-icon">🫙</div>
-            <h3 class="terroir-point-titre">Vinification Sans Sulfites</h3>
-            <p class="terroir-point-texte">
-              Nos vins sont élaborés sans sulfites ajoutés, avec des levures
-              indigènes. Une vinification naturelle qui révèle la vérité
-              du raisin et préserve ses arômes les plus subtils.
-            </p>
+            <img
+              class="terroir-point-img"
+              src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=700&q=80"
+              alt="Potager en permaculture"
+              loading="lazy"
+            />
+            <div class="terroir-point-body">
+              <h3 class="terroir-point-titre">Éco-Système Intégré</h3>
+              <p class="terroir-point-texte">
+                Vignes, maraîchage à traction animale, cochons en liberté
+                et four à pain forment un cercle vertueux. Tout se nourrit,
+                rien ne se perd.
+              </p>
+            </div>
           </div>
-          <div class="terroir-point reveal">
-            <div class="terroir-point-icon">🌬️</div>
-            <h3 class="terroir-point-titre">Éco-Système Intégré</h3>
-            <p class="terroir-point-texte">
-              Vignes, maraîchage en permaculture, élevage de cochons en liberté
-              et four à pain forment un cercle vertueux. Tout se nourrit,
-              rien ne se perd dans notre éco-domaine.
-            </p>
-          </div>
+
         </div>
       </div>
     </div>
@@ -249,109 +301,169 @@
   <!-- ░░░ EXPÉRIENCES ░░░ -->
   <section id="experiences">
     <div class="section-header reveal">
-      <p class="section-eyebrow">Art de vivre languedocien</p>
+      <p class="section-eyebrow">Oenotourisme</p>
       <h2 class="section-titre">Vos <em>Expériences</em></h2>
       <p class="section-sous-titre">
-        Venez vivre le domaine de l'intérieur — de la vigne au verre,
-        du potager à l'assiette.
+        Florence, Christophe et Zoba vous ouvrent les portes du domaine —
+        de la vigne au verre, du potager à l'assiette.
       </p>
     </div>
 
     <div class="exp-grille" style="max-width:1100px;margin:0 auto;">
+
       <div class="exp-carte exp-carte-1 reveal reveal-delay-1">
-        <div class="exp-fond-deco">Vigne</div>
-        <p class="exp-num">01 / 04</p>
-        <div class="exp-icone">🍇</div>
-        <h3 class="exp-titre">Visite Vigne &amp; Chai</h3>
-        <p class="exp-texte">
-          Parcourez nos 12,5 hectares de vignes avec Christophe. Découvrez les
-          cépages du Languedoc, notre approche biologique du terroir, et la
-          magie du chai — suivi d'une dégustation de vins et jus de raisin.
-        </p>
-        <span class="exp-tag">Sur réservation</span>
+        <img
+          class="exp-carte-img"
+          src="https://images.unsplash.com/photo-1527576539890-dfa815648363?w=800&q=80"
+          alt="Visite de chai et dégustation"
+          loading="lazy"
+        />
+        <div class="exp-carte-body">
+          <p class="exp-num">01 / 04</p>
+          <h3 class="exp-titre">Visite Vigne &amp; Chai</h3>
+          <p class="exp-texte">
+            Parcourez les 12,5 ha de vignes avec Christophe. Découvrez
+            les cépages du Languedoc, notre approche biologique, et la
+            magie du chai — suivi d'une dégustation de vins et jus de raisin
+            sans sulfites.
+          </p>
+          <span class="exp-tag">Sur réservation</span>
+        </div>
       </div>
 
       <div class="exp-carte exp-carte-2 reveal reveal-delay-2">
-        <div class="exp-fond-deco">Pain</div>
-        <p class="exp-num">02 / 04</p>
-        <div class="exp-icone">🍞</div>
-        <h3 class="exp-titre">Atelier Boulangerie</h3>
-        <p class="exp-texte">
-          Zoba, notre boulanger, vous ouvre les portes de son fournil.
-          De la farine à la fournée, apprenez les gestes ancestraux du pain
-          au levain cuit au four à bois dans la plus pure tradition paysanne.
-        </p>
-        <span class="exp-tag">Week-ends portes ouvertes</span>
+        <img
+          class="exp-carte-img"
+          src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80"
+          alt="Atelier boulangerie four à bois"
+          loading="lazy"
+        />
+        <div class="exp-carte-body">
+          <p class="exp-num">02 / 04</p>
+          <h3 class="exp-titre">Atelier Four à Bois</h3>
+          <p class="exp-texte">
+            Zoba vous ouvre les portes de son fournil. Du levain à la
+            fournée, apprenez les gestes du pain au four à bois
+            dans la plus pure tradition paysanne.
+          </p>
+          <span class="exp-tag">Week-ends portes ouvertes</span>
+        </div>
       </div>
 
       <div class="exp-carte exp-carte-3 reveal reveal-delay-1">
-        <div class="exp-fond-deco">Jardin</div>
-        <p class="exp-num">03 / 04</p>
-        <div class="exp-icone">🥕</div>
-        <h3 class="exp-titre">Jardin Nourricier</h3>
-        <p class="exp-texte">
-          Florence vous guide au potager maraîcher en permaculture. Traction
-          animale, associations de cultures, compost : une immersion dans
-          une agriculture douce qui réconcilie l'Homme et la Nature.
-        </p>
-        <span class="exp-tag">Saison avril–octobre</span>
+        <img
+          class="exp-carte-img"
+          src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80"
+          alt="Jardin maraîcher en permaculture"
+          loading="lazy"
+        />
+        <div class="exp-carte-body">
+          <p class="exp-num">03 / 04</p>
+          <h3 class="exp-titre">Jardin Nourricier</h3>
+          <p class="exp-texte">
+            Florence vous guide au potager maraîcher cultivé à la
+            traction animale. Associations de cultures, compost —
+            une immersion dans une agriculture douce et respectueuse.
+          </p>
+          <span class="exp-tag">Avril – Octobre</span>
+        </div>
       </div>
 
       <div class="exp-carte exp-carte-4 reveal reveal-delay-2">
-        <div class="exp-fond-deco">Libre</div>
-        <p class="exp-num">04 / 04</p>
-        <div class="exp-icone">🌄</div>
-        <h3 class="exp-titre">Randonnée &amp; Oenotourisme</h3>
-        <p class="exp-texte">
-          Le domaine s'inscrit dans un paysage de garrigue exceptionnel.
-          Randonnées guidées à travers pins et vignes, paniers pique-nique
-          garnies de nos produits, et couchers de soleil sur Montpellier.
-        </p>
-        <span class="exp-tag">Toute l'année</span>
+        <img
+          class="exp-carte-img"
+          src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80"
+          alt="Randonnée dans la garrigue autour de Montpellier"
+          loading="lazy"
+        />
+        <div class="exp-carte-body">
+          <p class="exp-num">04 / 04</p>
+          <h3 class="exp-titre">Randonnée &amp; Garrigue</h3>
+          <p class="exp-texte">
+            Le domaine s'inscrit dans un paysage de garrigue exceptionnel.
+            Randonnées guidées à travers pins et vignes, paniers
+            pique-nique garnies de nos produits du domaine.
+          </p>
+          <span class="exp-tag">Toute l'année</span>
+        </div>
       </div>
+
     </div>
   </section>
 
   <!-- ░░░ BOUTIQUE ░░░ -->
   <section id="boutique">
     <div class="section-header reveal">
-      <p class="section-eyebrow">Vente directe</p>
+      <p class="section-eyebrow">Circuit court · Vente directe</p>
       <h2 class="section-titre">Notre <em>Boutique</em></h2>
       <p class="section-sous-titre">
-        Des produits issus de notre éco-domaine, cultivés avec soin et vendus
-        en circuit court.
+        Tous nos produits sont cultivés, élevés ou cuits sur le domaine.
+        La boutique est ouverte tous les jours.
       </p>
     </div>
 
     <div class="produits-grille">
+
       <div class="produit-carte reveal reveal-delay-1">
-        <div class="produit-emoji">🍷</div>
-        <h3 class="produit-nom">Vins AOC</h3>
-        <p class="produit-desc">Rouges, rosés et blancs biologiques sans sulfites ajoutés, issus de nos vignes de garrigue.</p>
-        <span class="produit-badge">Sans sulfites</span>
+        <img
+          class="produit-img"
+          src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&q=80"
+          alt="Bouteilles de vins AOC Languedoc biologiques"
+          loading="lazy"
+        />
+        <div class="produit-body">
+          <h3 class="produit-nom">Vins AOC</h3>
+          <p class="produit-desc">Rouges, rosés et vins de pays. Biologiques, sans sulfites ajoutés.</p>
+          <span class="produit-badge">Sans sulfites</span>
+        </div>
       </div>
+
       <div class="produit-carte reveal reveal-delay-2">
-        <div class="produit-emoji">🥦</div>
-        <h3 class="produit-nom">Légumes Bio</h3>
-        <p class="produit-desc">Paniers de légumes de saison cultivés en permaculture à la traction animale sur notre potager.</p>
-        <span class="produit-badge">Permaculture</span>
+        <img
+          class="produit-img"
+          src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+          alt="Légumes bio du potager du domaine"
+          loading="lazy"
+        />
+        <div class="produit-body">
+          <h3 class="produit-nom">Légumes Bio</h3>
+          <p class="produit-desc">Légumes de saison cultivés en permaculture à la traction animale.</p>
+          <span class="produit-badge">Permaculture</span>
+        </div>
       </div>
+
       <div class="produit-carte reveal reveal-delay-3">
-        <div class="produit-emoji">🐷</div>
-        <h3 class="produit-nom">Charcuterie</h3>
-        <p class="produit-desc">Saucisses, boudins et produits issus de nos cochons élevés en pleine liberté sur le domaine.</p>
-        <span class="produit-badge">Élevage libre</span>
+        <img
+          class="produit-img"
+          src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=600&q=80"
+          alt="Charcuterie artisanale issue de cochons élevés en liberté"
+          loading="lazy"
+        />
+        <div class="produit-body">
+          <h3 class="produit-nom">Charcuterie</h3>
+          <p class="produit-desc">Saucisses et boudins issus de cochons de Christophe, élevés en liberté sur le domaine.</p>
+          <span class="produit-badge">Élevage libre</span>
+        </div>
       </div>
+
       <div class="produit-carte reveal reveal-delay-1">
-        <div class="produit-emoji">🍞</div>
-        <h3 class="produit-nom">Pain Paysan</h3>
-        <p class="produit-desc">Pain au levain cuit au four à bois par Zoba, notre boulanger artisan, avec farines locales.</p>
-        <span class="produit-badge">Four à bois</span>
+        <img
+          class="produit-img"
+          src="https://images.unsplash.com/photo-1549931319-a545dcf3bc7c?w=600&q=80"
+          alt="Pain au levain cuit au four à bois"
+          loading="lazy"
+        />
+        <div class="produit-body">
+          <h3 class="produit-nom">Pain au Four à Bois</h3>
+          <p class="produit-desc">Pain au levain cuit par Zoba dans le four à bois du domaine, avec farines locales.</p>
+          <span class="produit-badge">Four à bois</span>
+        </div>
       </div>
+
     </div>
 
-    <div style="text-align:center;margin-top:3.5rem;position:relative;z-index:1;">
-      <a href="#contact" class="btn-primaire" style="display:inline-block;">Commander &amp; S'informer</a>
+    <div style="text-align:center;margin-top:3rem;position:relative;z-index:1;">
+      <a href="#localisation" class="btn-primaire">Horaires d'ouverture</a>
     </div>
   </section>
 
@@ -363,164 +475,181 @@
     </div>
 
     <div class="event-banner reveal">
+
+      <!-- Visuel gauche -->
       <div class="event-left">
-        <p class="event-surtitre">Réceptions · Séminaires · Mariages</p>
-        <h3 class="event-titre">
-          Un cadre<br><em>exceptionnel</em><br>pour vos moments précieux
-        </h3>
-        <p class="event-desc">
-          Niché entre vignes et forêt de pins, le Domaine de Cassagnole propose
-          «&nbsp;La Chapelle&nbsp;», une magnifique salle de 250&nbsp;m², et une terrasse
-          panoramique et ombragée de 400&nbsp;m². Un décor naturel, hors du temps,
-          pour des événements qui marquent les esprits.
-        </p>
-        <p class="event-capacite">
-          Capacité de <span>10 à 220 personnes</span> · Ouvert toute l'année
-        </p>
+        <img
+          class="event-left-img"
+          src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=900&q=80"
+          alt="Salle de réception La Chapelle dans une pinède"
+          loading="lazy"
+        />
+        <div class="event-left-overlay"></div>
+        <div class="event-left-content">
+          <p class="event-surtitre">Réceptions · Séminaires · Mariages</p>
+          <h3 class="event-titre">
+            Un cadre<br><em>exceptionnel</em><br>au cœur d'une pinède
+          </h3>
+          <p class="event-desc">
+            Au cœur d'une pinède, à 10&nbsp;km de Montpellier, le Domaine de
+            Cassagnole accueille vos événements dans un décor naturel hors
+            du temps, loin de toute agitation.
+          </p>
+          <p class="event-capacite">
+            De <span>10 à 220 personnes</span> · Ouvert toute l'année
+          </p>
+        </div>
       </div>
 
+      <!-- Détails droite -->
       <div class="event-right">
         <div class="event-features">
+
           <div class="event-feature">
-            <span class="event-feature-icon">⛪</span>
+            <img
+              class="event-feature-img"
+              src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=200&q=80"
+              alt="La Chapelle, salle de 250m²"
+              loading="lazy"
+            />
             <div>
-              <h4 class="event-feature-titre">La Chapelle</h4>
-              <p class="event-feature-texte">Salle de 250 m² au cœur du domaine, avec poutres apparentes et lumière naturelle. Idéale pour mariages et réceptions intimes.</p>
+              <h4 class="event-feature-titre">La Chapelle — 250 m²</h4>
+              <p class="event-feature-texte">Magnifique salle au cœur du domaine, idéale pour mariages, banquets et événements jusqu'à 220 personnes.</p>
             </div>
           </div>
+
           <div class="event-feature">
-            <span class="event-feature-icon">🌿</span>
+            <img
+              class="event-feature-img"
+              src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=200&q=80"
+              alt="Terrasse panoramique ombragée de 400m²"
+              loading="lazy"
+            />
             <div>
-              <h4 class="event-feature-titre">Terrasse Panoramique</h4>
-              <p class="event-feature-texte">400 m² de terrasse ombragée avec vue sur les vignes et la garrigue. Cocktails dînatoires sous les étoiles du Languedoc.</p>
+              <h4 class="event-feature-titre">Terrasse Panoramique — 400 m²</h4>
+              <p class="event-feature-texte">Terrasse ombragée avec vue sur les vignes et la garrigue. Cocktails, dînatoires et soirées sous les étoiles.</p>
             </div>
           </div>
+
           <div class="event-feature">
-            <span class="event-feature-icon">🍽️</span>
+            <img
+              class="event-feature-img"
+              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=200&q=80"
+              alt="Service traiteur et thématique oenologique"
+              loading="lazy"
+            />
             <div>
               <h4 class="event-feature-titre">Traiteur &amp; Oenologie</h4>
-              <p class="event-feature-texte">Service traiteur libre ou fourni par nos soins. Thématiques oenologiques, dégustations, ateliers personnalisés possibles.</p>
+              <p class="event-feature-texte">Service traiteur libre ou fourni par nos soins. Thématiques oenologiques et randonnées possibles.</p>
             </div>
           </div>
+
         </div>
-        <a href="#contact" class="btn-primaire" style="display:inline-block;">Demander un devis gratuit</a>
+
+        <a
+          href="mailto:cassagnole@wanadoo.fr"
+          class="btn-primaire"
+          style="display:inline-block;"
+        >Demander un devis gratuit</a>
       </div>
+
     </div>
   </section>
 
-  <!-- ░░░ MAP VISUELLE ░░░ -->
-  <div id="carte-section">
-    <div class="carte-contenu">
-      <h3 class="carte-titre">Nous trouver</h3>
-      <p class="carte-adresse">Chemin de Bellevue — 34820 Assas · 10 km au nord de Montpellier</p>
-      <a
-        href="https://www.google.com/maps/dir/?api=1&destination=Domaine+de+Cassagnole,+Assas"
-        target="_blank" rel="noopener noreferrer"
-        class="carte-btn"
-      >
-        📍 Itinéraire Google Maps
-      </a>
-    </div>
-  </div>
-
-  <!-- ░░░ CONTACT ░░░ -->
-  <section id="contact">
+  <!-- ░░░ LOCALISATION ░░░ -->
+  <section id="localisation">
     <div class="section-header reveal">
-      <p class="section-eyebrow">Échangeons</p>
-      <h2 class="section-titre">Nous <em>Contacter</em></h2>
+      <p class="section-eyebrow">Chemin de Bellevue · Assas</p>
+      <h2 class="section-titre">Nous <em>Trouver</em></h2>
     </div>
 
-    <div class="contact-inner">
-      <!-- Infos -->
+    <div class="localisation-inner">
+
+      <!-- Infos pratiques -->
       <div class="reveal">
-        <h3 class="contact-info-titre">Venir au Domaine</h3>
-        <div class="contact-lignes">
-          <div class="contact-ligne">
-            <span class="contact-ligne-icon">📍</span>
+        <h3 class="localisation-info-titre">Accès &amp; Horaires</h3>
+        <div class="localisation-lignes">
+
+          <div class="localisation-ligne">
+            <div class="localisation-ligne-icon">📍</div>
             <div>
-              <p class="contact-ligne-label">Adresse</p>
-              <p class="contact-ligne-val">Chemin de Bellevue<br>34820 Assas, Hérault</p>
+              <p class="localisation-ligne-label">Adresse</p>
+              <p class="localisation-ligne-val">
+                Chemin de Bellevue<br>
+                34820 Assas, Hérault<br>
+                <em style="font-size:0.82rem;color:var(--fumee)">
+                  Passer le portail, avancer 120 m puis tourner à gauche en suivant les panneaux
+                </em>
+              </p>
             </div>
           </div>
-          <div class="contact-ligne">
-            <span class="contact-ligne-icon">📞</span>
+
+          <div class="localisation-ligne">
+            <div class="localisation-ligne-icon">📞</div>
             <div>
-              <p class="contact-ligne-label">Téléphone</p>
-              <p class="contact-ligne-val">04 67 59 63 28<br>06 15 83 77 40</p>
+              <p class="localisation-ligne-label">Téléphone</p>
+              <p class="localisation-ligne-val">
+                <a href="tel:+33615837740">06 15 83 77 40</a>
+              </p>
             </div>
           </div>
-          <div class="contact-ligne">
-            <span class="contact-ligne-icon">✉️</span>
+
+          <div class="localisation-ligne">
+            <div class="localisation-ligne-icon">✉️</div>
             <div>
-              <p class="contact-ligne-label">E-mail</p>
-              <p class="contact-ligne-val">contact@cassagnoles.fr</p>
+              <p class="localisation-ligne-label">E-mail</p>
+              <p class="localisation-ligne-val">
+                <a href="mailto:cassagnole@wanadoo.fr">cassagnole@wanadoo.fr</a>
+              </p>
             </div>
           </div>
-          <div class="contact-ligne">
-            <span class="contact-ligne-icon">🚗</span>
+
+          <div class="localisation-ligne">
+            <div class="localisation-ligne-icon">🚌</div>
             <div>
-              <p class="contact-ligne-label">Accès</p>
-              <p class="contact-ligne-val">Sortie A9 Vendargues (N°28)<br>Aéroport Montpellier à 10 min</p>
+              <p class="localisation-ligne-label">Accès</p>
+              <p class="localisation-ligne-val">
+                Sortie A9 Vendargues (N°28)<br>
+                Bus TAM ligne 23, arrêt Gaspard Monge + 1 km à pied<br>
+                Aéroport Montpellier à 10 min
+              </p>
             </div>
           </div>
+
         </div>
 
-        <div class="contact-horaires">
-          <p class="contact-horaires-titre">Horaires d'ouverture</p>
+        <div class="localisation-horaires">
+          <p class="localisation-horaires-titre">Boutique — Horaires d'ouverture</p>
           <div class="horaire-row"><span>Lundi – Vendredi</span><span>16h00 – 19h30</span></div>
-          <div class="horaire-row"><span>Samedi</span><span>9h00 – 12h30 · 16h00 – 19h30</span></div>
+          <div class="horaire-row"><span>Samedi</span><span>9h – 12h30 · 16h – 19h30</span></div>
           <div class="horaire-row"><span>Dimanche</span><span>Sur rendez-vous</span></div>
-          <div class="horaire-row"><span>Anglais &amp; espagnol</span><span>parlés ✓</span></div>
+          <div class="horaire-row"><span>Anglais &amp; Espagnol</span><span>parlés ✓</span></div>
         </div>
       </div>
 
-      <!-- Formulaire -->
-      <div class="contact-form reveal reveal-delay-2">
-        <h3 class="contact-form-titre">Envoyer un message</h3>
-        <div class="form-row">
-          <div class="form-groupe">
-            <label class="form-label" for="prenom">Prénom</label>
-            <input class="form-input" type="text" id="prenom" placeholder="Votre prénom" />
-          </div>
-          <div class="form-groupe">
-            <label class="form-label" for="nom">Nom</label>
-            <input class="form-input" type="text" id="nom" placeholder="Votre nom" />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-groupe">
-            <label class="form-label" for="email">E-mail</label>
-            <input class="form-input" type="email" id="email" placeholder="votre@email.fr" />
-          </div>
-          <div class="form-groupe">
-            <label class="form-label" for="telephone">Téléphone</label>
-            <input class="form-input" type="tel" id="telephone" placeholder="+33 6 …" />
+      <!-- Carte visuelle -->
+      <div class="localisation-carte reveal reveal-delay-2">
+        <img
+          class="localisation-carte-img"
+          src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=900&q=80"
+          alt="Paysage de garrigue et vignes près de Montpellier, Hérault"
+          loading="lazy"
+        />
+        <div class="localisation-carte-overlay">
+          <div class="localisation-carte-infos">
+            <h3 class="localisation-carte-titre">Domaine de Cassagnole</h3>
+            <p class="localisation-carte-adresse">Chemin de Bellevue · 34820 Assas · 10 km de Montpellier</p>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Domaine+de+Cassagnole,+Chemin+de+Bellevue,+34820+Assas"
+              target="_blank" rel="noopener noreferrer"
+              class="carte-btn"
+            >
+              Itinéraire Google Maps →
+            </a>
           </div>
         </div>
-        <div class="form-row">
-          <div class="form-groupe full">
-            <label class="form-label" for="sujet">Objet de votre demande</label>
-            <select class="form-select" id="sujet">
-              <option value="">— Choisir —</option>
-              <option>Achat de vins</option>
-              <option>Réservation d'une visite</option>
-              <option>Devis événement / mariage</option>
-              <option>Séminaire d'entreprise</option>
-              <option>Commande boutique</option>
-              <option>Autre demande</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-groupe full">
-            <label class="form-label" for="message">Message</label>
-            <textarea class="form-textarea" id="message" placeholder="Décrivez votre demande…"></textarea>
-          </div>
-        </div>
-        <button class="form-submit" type="button" onclick="handleSubmit()">
-          Envoyer le message
-        </button>
       </div>
+
     </div>
   </section>
 
@@ -528,16 +657,21 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-top">
+
         <div>
           <div class="footer-logo">Domaine de <span>Cassagnole</span></div>
           <p class="footer-tagline">
-            Éco-domaine viticole en agriculture biologique. Vins, légumes, charcuterie
-            et pain — nés d'un même respect du vivant.
+            Éco-domaine en agriculture biologique à Assas (34). Vins AOC sans sulfites,
+            légumes, charcuterie et pain — nés d'un même respect du vivant.
           </p>
           <div class="footer-social">
-            <a href="https://www.facebook.com/p/Domaine-De-Cassagnole-100063572740259/" target="_blank" rel="noopener" class="social-btn" title="Facebook">f</a>
-            <a href="mailto:contact@cassagnoles.fr" class="social-btn" title="E-mail">@</a>
-            <a href="tel:+33467596328" class="social-btn" title="Téléphone">☎</a>
+            <a
+              href="https://www.facebook.com/p/Domaine-De-Cassagnole-100063572740259/"
+              target="_blank" rel="noopener"
+              class="social-btn" title="Facebook"
+            >f</a>
+            <a href="mailto:cassagnole@wanadoo.fr" class="social-btn" title="E-mail">@</a>
+            <a href="tel:+33615837740" class="social-btn" title="Téléphone">☎</a>
           </div>
         </div>
 
@@ -547,7 +681,7 @@
             <li><a href="#intro">Le Domaine</a></li>
             <li><a href="#vins">Nos Vins</a></li>
             <li><a href="#terroir">Le Terroir</a></li>
-            <li><a href="#experiences">Visites & Dégustations</a></li>
+            <li><a href="#experiences">Visites</a></li>
             <li><a href="#boutique">Boutique</a></li>
             <li><a href="#evenements">Événements</a></li>
           </ul>
@@ -557,29 +691,31 @@
           <h4 class="footer-col-titre">Nos Produits</h4>
           <ul>
             <li><a href="#vins">Vins AOC Languedoc</a></li>
+            <li><a href="#vins">Rosé de Saignée</a></li>
             <li><a href="#boutique">Légumes Bio</a></li>
             <li><a href="#boutique">Charcuterie</a></li>
-            <li><a href="#boutique">Pain Artisanal</a></li>
-            <li><a href="#boutique">Jus de Raisin</a></li>
+            <li><a href="#boutique">Pain au Four à Bois</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4 class="footer-col-titre">Informations</h4>
           <ul>
-            <li><a href="#contact">Nous trouver</a></li>
-            <li><a href="#contact">Horaires</a></li>
-            <li><a href="#evenements">Événements &amp; Séminaires</a></li>
+            <li><a href="#localisation">Nous trouver</a></li>
+            <li><a href="#localisation">Horaires boutique</a></li>
+            <li><a href="#evenements">Mariages &amp; Séminaires</a></li>
             <li><a href="#experiences">Oenotourisme</a></li>
-            <li><a href="#contact">Presse &amp; Partenaires</a></li>
+            <li><a href="mailto:cassagnole@wanadoo.fr">Contact e-mail</a></li>
           </ul>
         </div>
+
       </div>
 
       <div class="footer-bottom">
         <p class="footer-copy">© 2025 Domaine de Cassagnole — Chemin de Bellevue, 34820 Assas, France</p>
         <div class="footer-certif">
           <span class="certif-tag">Agriculture Biologique</span>
+          <span class="certif-tag">Nature &amp; Progrès</span>
           <span class="certif-tag">AOC Languedoc</span>
           <span class="certif-tag">Sans Sulfites</span>
         </div>
@@ -593,17 +729,36 @@
     window.addEventListener('load', () => {
       setTimeout(() => {
         document.getElementById('loader').classList.add('hidden');
-      }, 2200);
+      }, 2000);
     });
 
     // ── Navbar scroll
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 60);
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
     }, { passive: true });
 
-    // ── Reveal on scroll
-    const reveals = document.querySelectorAll('.reveal');
+    // ── Burger mobile
+    const burger   = document.getElementById('burger');
+    const navMobile = document.getElementById('navMobile');
+
+    burger.addEventListener('click', () => {
+      const open = navMobile.classList.toggle('open');
+      burger.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open);
+    });
+
+    // Ferme le menu si on clique un lien
+    navMobile.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navMobile.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ── Reveal on scroll (IntersectionObserver)
+    const revealEls = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -611,56 +766,9 @@
           observer.unobserve(e.target);
         }
       });
-    }, { threshold: 0.12 });
-    reveals.forEach(el => observer.observe(el));
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-    // ── Burger (mobile)
-    const burger = document.getElementById('burger');
-    const navLinks = document.querySelector('.nav-links');
-    let menuOpen = false;
-    burger.addEventListener('click', () => {
-      menuOpen = !menuOpen;
-      navLinks.style.display = menuOpen ? 'flex' : 'none';
-      if (menuOpen) {
-        navLinks.style.flexDirection = 'column';
-        navLinks.style.position = 'fixed';
-        navLinks.style.top = '72px';
-        navLinks.style.left = '0';
-        navLinks.style.right = '0';
-        navLinks.style.background = 'rgba(250,247,240,0.97)';
-        navLinks.style.padding = '2rem';
-        navLinks.style.gap = '1.5rem';
-        navLinks.style.backdropFilter = 'blur(12px)';
-        navLinks.querySelectorAll('a').forEach(a => {
-          a.style.color = '#1A1208';
-          a.style.fontSize = '1rem';
-        });
-      }
-    });
-
-    // ── Smooth nav close on link click
-    document.querySelectorAll('.nav-links a').forEach(a => {
-      a.addEventListener('click', () => {
-        if (menuOpen) {
-          menuOpen = false;
-          navLinks.style.display = 'none';
-        }
-      });
-    });
-
-    // ── Form submit feedback
-    function handleSubmit() {
-      const prenom = document.getElementById('prenom').value.trim();
-      const email  = document.getElementById('email').value.trim();
-      if (!prenom || !email) {
-        alert('Veuillez renseigner au moins votre prénom et votre e-mail.');
-        return;
-      }
-      const btn = document.querySelector('.form-submit');
-      btn.textContent = '✓ Message envoyé — Merci !';
-      btn.style.background = '#4A5E3A';
-      btn.disabled = true;
-    }
+    revealEls.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
